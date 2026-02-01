@@ -38,7 +38,8 @@ Create a pull request for the current branch.
 ## Guidelines
 
 - **Title:** Under 70 characters, describes the change
-- **Summary:** 1-3 bullet points covering what changed and why
+- **Summary:** 1-2 sentences describing the change
+- **details:** Detailed description covering what changed and why
 - **Test plan:** Checklist of how to verify the changes work
 
 ## Output
