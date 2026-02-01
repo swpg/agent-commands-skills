@@ -16,11 +16,10 @@ This creates symlinks from repo files to system locations, backing up any existi
 
 ## Repository Structure
 
-- `claude/CLAUDE.md` - Global memory/instructions symlinked to `~/.claude/CLAUDE.md`
-- `claude/commands/` - Custom slash commands symlinked individually to `~/.claude/commands/`
-- `codex/instructions.md` - Global Codex instructions symlinked to `~/.codex/instructions.md`
-- `codex/skills/` - Custom skills symlinked individually to `~/.codex/skills/`
+- `instructions/global-instructions.md` - Shared instructions symlinked to both `~/.claude/CLAUDE.md` and `~/.codex/AGENTS.md`
+- `commands/` - Custom slash commands symlinked to both `~/.claude/commands/` and `~/.codex/commands/`
+- `skills/` - Custom skills symlinked to both `~/.claude/skills/` and `~/.codex/skills/`
 
 ## Adding New Commands/Skills
 
-Place new Claude commands in `claude/commands/` and new Codex skills in `codex/skills/`. Re-run `setup.sh` to create symlinks for new additions.
+Place new commands in `commands/` and new skills in `skills/`. Re-run `setup.sh` to create symlinks for new additions.
