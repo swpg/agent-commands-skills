@@ -7,3 +7,5 @@
 **Fail loudly.** Code must catch and surface failures, not silently continue. Uses of `.get()`, `hasattr()`, or similar defensive patterns are red flags requiring explicit justification.
 
 **Default to Python.** Use Python unless there's a clear reason for another language.
+
+**Commit regularly.** Commit at coherent checkpoints with informative commit messages. Don't let work pile up uncommitted.
