@@ -10,6 +10,7 @@ Create a pull request for the current branch.
    git status
    git log main..HEAD --oneline
    git diff main...HEAD --stat
+   git diff main...HEAD
    ```
 
 2. **Check if branch is pushed:**
@@ -20,7 +21,9 @@ Create a pull request for the current branch.
 
 3. **Analyze all commits** from main to HEAD (not just the latest) to understand the full scope of changes.
 
-4. **Create the PR:**
+4. **Focus on the diff, not the codebase.** The PR should describe what changed, not what exists. If you're modifying existing files, describe the modifications—not what those files do overall.
+
+5. **Create the PR:**
    ```bash
    gh pr create --title "Short title" --body "$(cat <<'EOF'
    ## Summary
@@ -38,7 +41,7 @@ Create a pull request for the current branch.
 ## Guidelines
 
 - **Title:** Under 70 characters, describes the change
-- **Summary:** 1-2 sentences describing the change
+- **Summary:** 1-2 sentences describing what was modified (not what the modified files do)
 - **details:** Detailed description covering what changed and why
 - **Test plan:** Checklist of how to verify the changes work
 
