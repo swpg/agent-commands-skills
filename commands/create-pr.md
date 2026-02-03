@@ -2,9 +2,21 @@
 
 Create a pull request for the current branch.
 
+## CRITICAL: Diff Only
+
+**DO NOT read any files.** The git diff output contains everything you need.
+
+The PR description must describe ONLY what changed, never what exists. You are writing a changelog entry, not documentation.
+
+### What NOT to do
+- Don't describe what files do
+- Don't explain the repository structure
+- Don't summarize the codebase purpose
+- Don't read files for "context"
+
 ## Instructions
 
-1. **Gather context:**
+1. **Gather context from git only:**
    ```bash
    git branch --show-current
    git status
@@ -21,13 +33,12 @@ Create a pull request for the current branch.
 
 3. **Analyze all commits** from main to HEAD (not just the latest) to understand the full scope of changes.
 
-4. **Focus on the diff, not the codebase.** The PR should describe what changed, not what exists. If you're modifying existing files, describe the modifications—not what those files do overall.
-
-5. **Create the PR:**
+4. **Create the PR:**
    ```bash
    gh pr create --title "Short title" --body "$(cat <<'EOF'
    ## Summary
-   <1-3 bullet points>
+   - Add/Update/Fix/Remove [specific thing that changed]
+   - Add/Update/Fix/Remove [another change if applicable]
 
    ## Test plan
    - [ ] Testing step 1
@@ -40,9 +51,8 @@ Create a pull request for the current branch.
 
 ## Guidelines
 
-- **Title:** Under 70 characters, describes the change
-- **Summary:** 1-2 sentences describing what was modified (not what the modified files do)
-- **details:** Detailed description covering what changed and why
+- **Title:** Under 70 characters, action verb + what changed (e.g., "Fix login validation", "Add user export feature")
+- **Summary:** Each bullet starts with Add/Update/Fix/Remove and describes a specific change
 - **Test plan:** Checklist of how to verify the changes work
 
 ## Output
